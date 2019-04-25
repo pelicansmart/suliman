@@ -39,8 +39,8 @@ body{
     flex-direction: column;
     flex-wrap: wrap;
     margin: 2vw auto;
-    padding-right: 8vw;
-    padding-left: 8vw;
+    padding-right: 4vw;
+    padding-left: 4vw;
     overflow: hidden;
     justify-content: center;
     flex-wrap: wrap;
@@ -53,6 +53,7 @@ body{
 	font-size: 4em;
 	font-family: Trattatello; 
 	font-weight: bolder;
+    letter-spacing: normal;
     line-height: 100%;
     color: #902163;
     height: 100%;
@@ -87,8 +88,8 @@ main{
     box-sizing: border-box;
 	width: auto;
 	margin:0 auto;
-	padding-right: 8vw;
-	padding-left: 8vw;
+	padding-right: 2vw;
+	padding-left: 2vw;
     justify-content: center;
     text-align: center;
 	overflow: hidden;
@@ -96,6 +97,25 @@ main{
 	-moz-box-sizing :border-box;
 }
 
+section{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: left;
+    flex-flow: row;
+    flex-wrap: wrap;
+    border-bottom: 1px solid gray;
+}
+
+#projects-section{
+    margin:1em;
+}
+
+.project-item{
+    position: relative;
+    box-sizing: inherit;
+    width: 33.333333%;
+}
 
 img{
     opacity: 1;
@@ -107,52 +127,69 @@ img{
 }
 
 
-#gallary{
-	margin: 0;
-	padding: 0;
-    flex-flow: row;
-    flex-wrap: wrap;
-    justify-content: center;
-
-}
-
-#gallary .image-container{
+.image-container{
     box-sizing: border-box;
-    position: relative;
     display: flex;
     justify-content: center;
     align-content: center;
-    float: left;
     overflow: hidden;
     object-fit: scale-down;
-    width: 24.4%;
-    padding:1em;
-    margin:.3em .3em;
+    background-color: white;
+    padding:0;
+    margin:0;
 }
-
 .image{
-    height: 250px;
-/*    width: 400px;
-    min-width: 300px;
-    min-height: 100px;*/
-    max-width: 100%;  
-    object-fit: scale-down;  
+    width: 100%;
+    height: auto;
+    object-fit: scale-down; 
     overflow: hidden;
     margin: 0;
-    padding: 1em;
+    padding:0;
     border-radius: 2em;
 }
 
+#eve:hover .project-item-overlay {
+    background-color: #00FA9A;
+    opacity: .7;
+    transform: scale(1);
+}
+#eve:hover .project-item-overlay-text{
+        color: white;
+}
 
-/*a{
-    display: inline-block;
-    justify-content: center;
-    object-fit: cover;
-    margin: 0;
-}*/
-/*Text decoration*/
-a :hover{
-    border: 1px solid red;
+#apu-hms:hover .project-item-overlay {
+    background-color: #FF6347;
+    opacity: .8;
+    transform: scale(1);
+}
+#apu-hms:hover .project-item-overlay-text{
+        color: white;
+        font-size: 2em;
+}
+.project-item-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  border-radius: 2em;
+  transition: .3s ease;
+}
+
+
+.project-item-overlay-text{
+  font-weight: bold;
+  font-size: 3em;
+  position: absolute;
+  color: transparent;
+line-height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 
@@ -168,29 +205,24 @@ footer{
 }
 
 
-@media only screen and (max-width: 2000px) {
-  #gallary .image-container {
-    width:24%;
+@media only screen and (min-width: 1200px){
+    .project-item{
+        width: 24.999999%;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width: 979) {
+   .project-item{
+    width: 33.333333%;
   }
 }
-@media only screen and (max-width: 1400px) {
-  #gallary .image-container {
-    width: 24%;
-  }
-}
-@media only screen and (max-width: 1200px) {
-  #gallary .image-container {
-    width: 31.6%;
-  }
-}
-@media only screen and (max-width: 700px){
-  #gallary .image-container {
-    width: 46%;
-  }
+@media only screen and (max-width: 767px){
+    .project-item {
+        width: 49.99999%;
+    }
     .site-header{
         margin: 2vw auto;
-    padding-right: 2vw;
-    padding-left: 2vw;
+        padding-right: 2vw;
+        padding-left: 2vw;
     }
 }
 /*responsive*/
@@ -198,7 +230,10 @@ footer{
     body{
         min-width: 380px;
     }
-  #gallary .image-container {
+    #projects-section{
+        margin: 2em auto;
+    }
+   .project-item {
     justify-content: center;
     width: 100%;
   }
