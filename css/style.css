@@ -1,4 +1,4 @@
-a, abbr, acronym, address, applet, b, big, blockquote, body, button, caption,
+ a, abbr, acronym, address, applet, b, big, blockquote, body, button, caption,
 center, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, font, footer, form, h1, 
 h2, h3, h4, h5, h6, header, html, i, iframe, img, ins, kbd, 
 label, legend, li, nav, object, ol, p, pre, q, s, samp, section, small, span, strike, strong, sub, sup, table, tbody, td, tfoot, th, thead, title, tr, tt, u, ul, var {
@@ -17,7 +17,7 @@ label, legend, li, nav, object, ol, p, pre, q, s, samp, section, small, span, st
 body{
     display: block;
     max-width: 2000px;
-    font-family: 'Lato',"Times New Roman",Times,serif;
+    font-family: serif, helvitica;
     line-height: 1.25em;
     letter-spacing: 0em;
     font-weight: 400;
@@ -29,6 +29,25 @@ body{
     background-color: #fff;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-style: bold;
+    color: #212121;
+    text-rendering: optimizeLegibility;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+p{
+    font-family: "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.8;
+    /* margin-bottom: 1.25rem; */
+    text-rendering: optimizeLegibility;
 }
 
 /*header content*/
@@ -57,6 +76,7 @@ body{
     line-height: 100%;
     color: #902163;
     height: 100%;
+    margin: 0;
 /*    font-size:2.9vw;*/
 }
 #navigation ul{
@@ -97,17 +117,15 @@ main{
 	-moz-box-sizing :border-box;
 }
 
-section{
+#blog-section, #projects-section{
     display: flex;
     margin: 0;
     padding: 0;
     justify-content: left;
-    flex-flow: row;
     flex-wrap: wrap;
-    border-bottom: 1px solid gray;
 }
 
-#projects-section{
+#projects-section, #blog-section{
     margin:1em;
 }
 
@@ -129,9 +147,9 @@ img{
 
 .image-container{
     box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-content: center;
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-content: center;*/
     overflow: hidden;
     object-fit: scale-down;
     background-color: white;
@@ -146,6 +164,25 @@ img{
     margin: 0;
     padding:0;
     border-radius: 2em;
+}
+
+#blog-section{
+    justify-content: center;
+    align-content: center;
+    margin: 1em 1.5em;
+}
+
+#blog-text{
+    text-align:left;
+    margin: 1em;
+    width: 34%;
+}
+
+#blog-image-container{
+    overflow: hidden;
+    width: 56%;
+    justify-content: center;
+    margin: 1em;
 }
 
 #eve:hover .project-item-overlay {
@@ -181,29 +218,61 @@ img{
 
 
 .project-item-overlay-text{
-  font-weight: bold;
-  font-size: 3em;
-  position: absolute;
-  color: transparent;
-line-height: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+      font-weight: bold;
+      font-size: 3em;
+      position: absolute;
+      color: transparent;
+        line-height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
 }
 
+.footer{
+    background-color: #fff;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    box-sizing: border-box;
+    justify-content: space-between;
+    width: 100%;
+    text-align: left;
+    padding: 3vw;
+    margin: 2em auto 0 auto;
+}
 
-/*footer*/
-footer{
-    display: block;
+.footer .footer-left p{
+    color:  #8f9296;
+    margin: .5em auto;
+}
+.footer .footer-right{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.footer .footer-right a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    background-color:  #33383b;
+    border-radius: 2px;
+    color: #ffffff;
     text-align: center;
-    margin: 1em auto;
-    border-top:2px solid blue;
-    margin: 4em auto
-    padding-top: 100px;
-    padding-bottom: 50px;
+    line-height: 35px;
+    margin-left: .7em;
 }
 
+@media (max-width: 600px) {
+        .footer{
+            flex-direction: column;
+            justify-content: space-between;
+            align-content: center;
+        }
+}
 
 @media only screen and (min-width: 1200px){
     .project-item{
@@ -223,6 +292,12 @@ footer{
         margin: 2vw auto;
         padding-right: 2vw;
         padding-left: 2vw;
+    }
+    #blog-text{
+        width: auto;
+    }
+    #blog-image-container{
+        width: auto;
     }
 }
 /*responsive*/
