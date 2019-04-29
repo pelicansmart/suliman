@@ -80,14 +80,22 @@ p{
     justify-content: center;
     align-content: center;
 }
+#logo{
+    background-color: #33383b;
+    color: #ffffff;
+    padding: .7em;
+    border-radius: 1em;
+}
 #logo h1{
 	text-align: center;
 	font-size: 4em;
 	font-family: Trattatello; 
 	font-weight: bolder;
     letter-spacing: normal;
+    background: #33383b;
+    text-transform: uppercase;
     line-height: 100%;
-    color: #902163;
+    color: #ffffff;
     height: 100%;
     margin: 0;
 /*    font-size:2.9vw;*/
