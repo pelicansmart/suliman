@@ -50,22 +50,35 @@ p{
     text-rendering: optimizeLegibility;
 }
 
+/*menu item slected*/
+.selected{
+    color: black;
+    font-size: 2em;
+    border-bottom: gray;
+}
+
 /*header content*/
 .site-header{
 	width: auto;
-    max-width: 2000px;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-direction: row;
     margin: 2vw auto;
     padding-right: 4vw;
     padding-left: 4vw;
     overflow: hidden;
-    justify-content: center;
+    justify-content: space-between;
+    align-content: center;
     flex-wrap: wrap;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+.site-header #navigation-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
 }
 #logo h1{
 	text-align: center;
@@ -123,6 +136,7 @@ main{
     padding: 0;
     justify-content: left;
     flex-wrap: wrap;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
 #projects-section, #blog-section{
@@ -155,7 +169,7 @@ img{
     background-color: white;
     padding:0;
     margin:0;
-}
+}   
 .image{
     width: 100%;
     height: auto;
@@ -163,19 +177,29 @@ img{
     overflow: hidden;
     margin: 0;
     padding:0;
+}
+#project-section .image{
     border-radius: 2em;
 }
 
+
 #blog-section{
+    display: flex;
     justify-content: center;
     align-content: center;
-    margin: 1em 1.5em;
+    /*margin: 1em;*/
+    /*box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.12);*/
 }
 
 #blog-text{
     text-align:left;
     margin: 1em;
+    padding: .5em;
+    padding-top: 0;
     width: 34%;
+}
+#blog-text p{
+    text-align: justify;
 }
 
 #blog-image-container{
@@ -222,7 +246,7 @@ img{
       font-size: 3em;
       position: absolute;
       color: transparent;
-        line-height: 100%;
+    line-height: 100%;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -278,17 +302,25 @@ img{
     .project-item{
         width: 24.999999%;
     }
+    .site-header #navigation{
+    margin-top: .9em;
+  }
 }
-@media only screen and (min-width: 768px) and (max-width: 979) {
+@media only screen and (min-width: 770px) and (max-width: 1200px) {
    .project-item{
     width: 33.333333%;
   }
+  .site-header #navigation{
+    margin-top: .9em;
+  }
 }
-@media only screen and (max-width: 767px){
+@media only screen and (min-width: 480px) and (max-width: 770px){
     .project-item {
         width: 49.99999%;
     }
     .site-header{
+        flex-direction: column;
+        justify-content: center;
         margin: 2vw auto;
         padding-right: 2vw;
         padding-left: 2vw;
@@ -297,7 +329,7 @@ img{
         width: auto;
     }
     #blog-image-container{
-        width: auto;
+        width: 100%;
     }
 }
 /*responsive*/
@@ -305,13 +337,30 @@ img{
     body{
         min-width: 380px;
     }
-    #projects-section{
-        margin: 2em auto;
+    #projects-section, #blog-section{
+        margin: 1em auto;
+        box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.12);
+    }
+    #blog-section{
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #blog-section #blog-text{
+        width: auto;
+        padding: 0;
+    }
+    #blog-section #blog-text h1{
+        text-align: center;
+    }
+    #blog-section #blog-image-container{
+        width: auto;
+        padding: 0
     }
    .project-item {
     justify-content: center;
     width: 100%;
-  }
+    }
     #logo h1{
     text-align: center;
     font-size: 3em;
@@ -321,7 +370,10 @@ img{
     /*    font-size:2.9vw;*/
     }
     .site-header{
+        flex-direction: column;
+        justify-content: center;
+        padding-right: 2vw;
+        padding-left: 2vw;
         margin: 1vw auto;
-    padding-right: 6vw;
     }
 }
