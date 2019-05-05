@@ -14,6 +14,9 @@ label, legend, li, nav, object, ol, p, pre, q, s, samp, section, small, span, st
 *{
     box-sizing: border-box;
 }
+html{
+    height: 100%;
+}
 body{
     display: block;
     max-width: 2000px;
@@ -29,6 +32,7 @@ body{
     background-color: #fff;
     overflow-x: hidden;
     overflow-y: auto;
+    min-height: 100%;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -158,6 +162,8 @@ main{
 }
 
 img{
+    width: 100%;
+    height: auto;
     opacity: 1;
     -webkit-transition: opacity 1000ms cubic-bezier(.33,0,.2,1);
     -moz-transition: opacity 1000ms cubic-bezier(.33,0,.2,1);
@@ -262,6 +268,8 @@ img{
 }
 
 .footer{
+    position: relative;
+    bottom: 0;
     background-color: #fff;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
     display: flex;
@@ -297,7 +305,30 @@ img{
     line-height: 35px;
     margin-left: .7em;
 }
+/*//about.html*/
+#introduction{
+    display: flex;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+#profile-image-wrapper{
+    width: 100%;
+}
 
+#profile-image-wrapper #profile-image{
+    border-radius: 50%;
+}
+
+#introduction #author-name h1{
+    font-size: 2em;
+    color: gray;
+    text-align: center;
+    height: 100%;
+
+}
 @media (max-width: 600px) {
         .footer{
             flex-direction: column;
@@ -310,6 +341,7 @@ img{
     .project-item{
         width: 24.999999%;
     }
+
     .site-header #navigation{
     margin-top: .9em;
   }
@@ -318,6 +350,9 @@ img{
    .project-item{
     width: 33.333333%;
   }
+  #introduction #profile-image-wrapper #profile-image{
+        width: 300px;
+    }
   .site-header #navigation{
     margin-top: .9em;
   }
@@ -325,6 +360,16 @@ img{
 @media only screen and (min-width: 480px) and (max-width: 770px){
     .project-item {
         width: 49.99999%;
+    }
+    main{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    #introduction #profile-image-wrapper {
+        width: 100%;
+    }
+    #introduction #profile-image-wrapper #profile-image{
+        border-radius: 0;
     }
     .site-header{
         flex-direction: column;
@@ -348,6 +393,13 @@ img{
     #projects-section, #blog-section{
         margin: 1em auto;
         box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.12);
+    }
+    #introduction #profile-image-wrapper #profile-image{
+        border-radius: 0;
+    }
+    main{
+        padding-left: 0;
+        padding-right: 0;
     }
     #blog-section{
         flex-direction: column;
