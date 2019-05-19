@@ -19,8 +19,8 @@
 				<nav>    
 					<ul>      
 						<li><a href="index.html"><span id="menu-item-home">Intro</span></a></li> 
-						<li><a href="#">About</a></li> 
-						<li><a href="#">Contact</a></li>
+						<li><a href="about.html">About</a></li> 
+						<li><a href="contact.html">Contact</a></li>
 					</ul>  
 				</nav> 
 			</div>
@@ -29,14 +29,24 @@
 	<main>
 
 		<section id="introduction">
-			<div id="profile-image-wrapper">
-				<img id="profile-image" src="../images/author-suliman-medium.png" srcset="../images/author-suliman-medium.png 1000w, ../images/author-suliman-large.jpg 2000w" alt="proile image" >
+
+			<div id="about-me">
+				<h1>About me
+				</h1>
 			</div>
-			<div id="author-name">
-				<h1>Suliman Noor Mohammad</h1>
+
+			<div id="profile-image-container" class="image-container">
+				<picture>
+					<source media="(min-width:771px)" srcset="../images/author-suliman-hero.png">
+					<source media="(min-width:480px)" srcset="../images/author-suliman-medium.png">
+					<img id="profile-image" class="image" src="../images/author-suliman-small.png" alt="proile image">
+				</picture>
 			</div>
-			<div id="proile-summary">
-				<p>I am a fresh graudate</p>
+			<div id="profile-summary">
+				<p>I am a Software Engineem, recently (2019) graduated from Asia Pacific University, I am a Web, Mobile and Desktop developer with hands on experience on various frameworks and platforms. <br>
+				I believe in the freedom of educational resources which makes me a part of the open-source community, I am also a technology enthusiast which makes my career my passion. My edeavor is to improve my  self as programmer, writer, speaker, designer, and above all a better human.
+				<br>
+				I  have a dream of teaching the knowledge and experience I have gained to make a change.</p>
 			</div>
 		</section>
 

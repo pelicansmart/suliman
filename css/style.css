@@ -13,13 +13,19 @@ label, legend, li, nav, object, ol, p, pre, q, s, samp, section, small, span, st
 
 *{
     box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    font-kerning: auto;
 }
 html{
     height: 100%;
+    font-family: sans-serif;
+    -webkit-text-size-adjust:100%;
 }
 body{
+    position: relative;
     display: block;
-    max-width: 2000px;
     font-family: serif, helvitica;
     line-height: 1.25em;
     letter-spacing: 0em;
@@ -32,6 +38,7 @@ body{
     background-color: #fff;
     overflow-x: hidden;
     overflow-y: auto;
+    height: 100%;
     min-height: 100%;
 }
 
@@ -53,7 +60,37 @@ p{
     /* margin-bottom: 1.25rem; */
     text-rendering: optimizeLegibility;
 }
+/*main content*/
+main{
+    position: relative;
+    box-sizing: border-box;
+    width: auto;
+    margin:0 auto;
+    padding-right: 2vw;
+    padding-left: 2vw;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing :border-box;
+}
 
+img{
+    object-fit: cover;
+    opacity: 1;
+    -webkit-transition: opacity 1000ms cubic-bezier(.33,0,.2,1);
+    -moz-transition: opacity 1000ms cubic-bezier(.33,0,.2,1);
+    -ms-transition: opacity 1000ms cubic-bezier(.33,0,.2,1);
+    -o-transition: opacity 1000ms cubic-bezier(.33,0,.2,1);
+    transition: opacity 1000ms cubic-bezier(.33,0,.2,1);
+}
+section{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: left;
+    flex-wrap: wrap;
+}
 /*menu item slected*/
 .selected{
     color: black;
@@ -76,6 +113,9 @@ p{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+}
+#project-section, #blog-section{
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.12);
 }
 .site-header #navigation-wrapper{
     display: flex;
@@ -128,19 +168,6 @@ p{
     font-weight:6em;
 }
 
-/*main content*/
-main{
-    box-sizing: border-box;
-	width: auto;
-	margin:0 auto;
-	padding-right: 2vw;
-	padding-left: 2vw;
-    justify-content: center;
-    text-align: center;
-	overflow: hidden;
-	-webkit-box-sizing:border-box;
-	-moz-box-sizing :border-box;
-}
 
 #blog-section, #projects-section{
     display: flex;
@@ -161,25 +188,14 @@ main{
     width: 33.333333%;
 }
 
-img{
-    width: 100%;
-    height: auto;
-    opacity: 1;
-    -webkit-transition: opacity 1000ms cubic-bezier(.33,0,.2,1);
-    -moz-transition: opacity 1000ms cubic-bezier(.33,0,.2,1);
-    -ms-transition: opacity 1000ms cubic-bezier(.33,0,.2,1);
-    -o-transition: opacity 1000ms cubic-bezier(.33,0,.2,1);
-    transition: opacity 1000ms cubic-bezier(.33,0,.2,1);
-}
 
 
 .image-container{
     box-sizing: border-box;
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*    align-content: center;*/
+    justify-content: center;
+    align-content: center;
     overflow: hidden;
-    object-fit: scale-down;
+    object-fit: cover;
     background-color: white;
     padding:0;
     margin:0;
@@ -241,6 +257,17 @@ img{
         color: white;
         font-size: 2em;
 }
+
+#pelicansmart:hover .project-item-overlay {
+    background-color: #00FA9A;
+    opacity: .7;
+    transform: scale(1);
+}
+#pelicansmart:hover .project-item-overlay-text{
+        color: white;
+        font-size: 2em;
+}
+
 .project-item-overlay {
   position: absolute;
   bottom: 0;
@@ -305,30 +332,50 @@ img{
     line-height: 35px;
     margin-left: .7em;
 }
+
+
+
+
+
 /*//about.html*/
 #introduction{
-    display: flex;
-    box-sizing: border-box;
-    flex-wrap: wrap;
+    margin: 1em;
     flex-direction: column;
     align-content: center;
     justify-content: center;
 }
-#profile-image-wrapper{
-    width: 100%;
+#profile-image-container{
+    border-radius: 2em;
+}
+#profile-image-container #profile-image{
+    border-radius: 2em;
+    height: auto;
+    object-fit: cover;
 }
 
-#profile-image-wrapper #profile-image{
-    border-radius: 50%;
-}
+#introduction #profile-summary p{
+    margin:0.2em;
+    padding:1em;
+    text-align: justify;
+} 
 
-#introduction #author-name h1{
-    font-size: 2em;
-    color: gray;
+#introduction #about-me h1{
+    font-size: 3em;
+    color: #33383b;
+    font-weight: 900px;
+    margin: 0.1em auto;
     text-align: center;
     height: 100%;
-
 }
+/*#introduction #author-name h1:after{
+     content: "Suliman Noor Mohammad";
+     position: absolute;
+    color: rgba(255,0,0,0.5);
+    left: 13px;
+    /* top: 5px; 
+    color: rgba(255,0,0,0.5);
+}*/
+
 @media (max-width: 600px) {
         .footer{
             flex-direction: column;
@@ -350,9 +397,6 @@ img{
    .project-item{
     width: 33.333333%;
   }
-  #introduction #profile-image-wrapper #profile-image{
-        width: 300px;
-    }
   .site-header #navigation{
     margin-top: .9em;
   }
@@ -365,12 +409,7 @@ img{
         padding-left: 0;
         padding-right: 0;
     }
-    #introduction #profile-image-wrapper {
-        width: 100%;
-    }
-    #introduction #profile-image-wrapper #profile-image{
-        border-radius: 0;
-    }
+
     .site-header{
         flex-direction: column;
         justify-content: center;
@@ -394,9 +433,7 @@ img{
         margin: 1em auto;
         box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.12);
     }
-    #introduction #profile-image-wrapper #profile-image{
-        border-radius: 0;
-    }
+
     main{
         padding-left: 0;
         padding-right: 0;
@@ -429,6 +466,10 @@ img{
     text-align: center;
     /*    font-size:2.9vw;*/
     }
+    #introduction #author-name h1{
+        font-size: 1.5em;
+        color: black;
+    }
     .site-header{
         flex-direction: column;
         justify-content: center;
@@ -436,4 +477,5 @@ img{
         padding-left: 2vw;
         margin: 1vw auto;
     }
+
 }
