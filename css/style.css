@@ -1,29 +1,4 @@
- a, abbr, acronym, address, applet, b, big, blockquote, body, button, caption,
-center, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, font, footer, form, h1, 
-h2, h3, h4, h5, h6, header, html, i, iframe, img, ins, kbd, 
-label, legend, li, nav, object, ol, p, pre, q, s, samp, section, small, span, strike, strong, sub, sup, table, tbody, td, tfoot, th, thead, title, tr, tt, u, ul, var {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    vertical-align: baseline;
-    background: 0 0;
-    box-sizing: border-box;
-}
-
-*{
-    box-sizing: border-box;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing:antialiased;
-    -moz-osx-font-smoothing:grayscale;
-    font-kerning: auto;
-}
-html{
-    height: 100%;
-    font-family: sans-serif;
-    -webkit-text-size-adjust:100%;
-}
-
+-------prefixpages
 #body {
   color: #777777;
   font-family: "Poppins", sans-serif;
@@ -72,11 +47,21 @@ h4, h5, h6 {
   font-weight: 600 !important;
   color: #222222;
 }
+#body .btn{
+    display: inline-block;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #FFCF00;
+    border: none;
+    border-radius: 0.1em;
+}
 
 #body .p1-gradient-bg, .banner-left .primary-btn, .home-about-right .primary-btn, .facts-area, .thumb .overlay-bg, .price-area .single-price:hover, .brands-area, .about-banner, .sb_bar {
-  background: -moz-background-image: linear-gradient(to right top, #ffb302, #ffb800, #ffbd00, #ffc300, #ffc800, #ffc900, #ffcb00, #ffcc00, #ffca00, #ffc700, #fec500, #fec300);
-  background: -webkit-background-image: linear-gradient(to right top, #ffb302, #ffb800, #ffbd00, #ffc300, #ffc800, #ffc900, #ffcb00, #ffcc00, #ffca00, #ffc700, #fec500, #fec300);
-  background: -ms-background-image: linear-gradient(to right top, #ffb302, #ffb800, #ffbd00, #ffc300, #ffc800, #ffc900, #ffcb00, #ffcc00, #ffca00, #ffc700, #fec500, #fec300);
+background-image: radial-gradient(circle, #ffdf01, #ffde01, #ffdd01, #fedc01, #fedb01, #fedb01, #fedb01, #fedb01, #fedc01, #ffdd01, #ffde01, #ffdf01);
 }
 
 #body .primary-btn {
@@ -160,6 +145,16 @@ h4, h5, h6 {
   background: transparent;
   color: #fff;
 }
+
+#body .btn-readmore{
+    background:transparent;
+    color: #FFCF00;
+    font-weight: 400;
+}
+#body .btn-readmore:hover{
+    background: #FFCF00;
+    color: #fff;
+}
 /*-------- Top Navigation Area -------*/
 #body #logo-text{
     background-color: #191919;
@@ -180,6 +175,16 @@ h4, h5, h6 {
 }
 
 
+/* =================================== */
+/*  Homepage Styles
+/* =================================== */
+#body .text-center{
+    text-align: center;
+}
+
+#body .section-gap {
+  padding: 6.25em 0;
+}
 
 
 /*-------- Start Banner Area ------------*/
@@ -251,18 +256,6 @@ h4, h5, h6 {
 }
 
 
-/* =================================== */
-/*  Homepage Styles
-/* =================================== */
-#body .text-center{
-    text-align: center;
-}
-
-#body .section-gap {
-  padding: 6.25em 0;
-}
-
-
 /*------services-area------ */
 
 #body .single-services {
@@ -306,6 +299,21 @@ h4, h5, h6 {
 }
 
 
+/*-------facts-area-------*/
+#body .facts-area .single-facts h1, p {
+    color: #fff;
+}
+#body .single-fact h1{
+    font-weight: 700;
+}
+
+
+
+@media (max-width: 800px) {
+  .single-fact {
+    margin-bottom: 30px;
+  }
+}
 
 /*.footer{
     position: relative;
