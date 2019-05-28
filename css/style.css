@@ -300,13 +300,12 @@ background-image: radial-gradient(circle, #ffdf01, #ffde01, #ffdd01, #fedc01, #f
 
 
 /*-------facts-area-------*/
-#body .facts-area .single-facts h1, p {
+#body .facts-area .single-facts h1, .single-facts p {
     color: #fff;
 }
 #body .single-fact h1{
     font-weight: 700;
 }
-
 
 
 @media (max-width: 800px) {
