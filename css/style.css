@@ -250,7 +250,7 @@ background-image: radial-gradient(circle, #ffdf01, #ffde01, #ffdd01, #fedc01, #f
 }
 
 #body .banner-left h1 {
-  margin: 20px 0;
+  margin: 1.2em 0;
   font-size: 60px;
   font-weight: 600;
   text-transform: uppercase;
@@ -366,17 +366,36 @@ background-image: radial-gradient(circle, #ffdf01, #ffde01, #ffdd01, #fedc01, #f
 
 /*----foooter-area------------*/
 #body .page-footer {
-  padding: .5em;
-  background: #33383b;
-  color: #fff;
+  margin-top: 2em;
+  padding: 1em;
+  border-top: 1px solid #FFCF00;
 }
-#body .page-footer h1{
-  color: #FFCF00;
+#body .page-footer .contact {
+  padding: 4em 1em;
+}
+#body .page-footer .footer-contact h1{
+  margin-bottom: 1em;
+}
+
+@media (max-width: 767px) {
+
+  #body .page-footer .contact-left{
+      text-align: center;
+  }
+  #body .page-footer .bottom-nav{
+    justify-content: center !important;
+  }
+
+  #body .page-footer .copyright p{
+    float: none !important;
+  }
+
 }
 
 .fa {
   padding: .2em;
   font-size: 2em;
+  background: #fff;
   text-align: center;
   text-decoration: none;
   border-radius: .2em;
@@ -386,33 +405,9 @@ background-image: radial-gradient(circle, #ffdf01, #ffde01, #ffdd01, #fedc01, #f
   color: #FFCF00;
   text-decoration: none;
 }
-@media (min-width: 767px){
-  .fa{
-    margin-left: 1em;
-  }
+
+.fa-facebook, .fa-twitter, .fa-google, .fa-linkedin , .fa-instagram, .fa-skype {
+  color: #33383b;
+  margin: 0 .5em;
 }
 
-.fa-facebook {
-  color: white;
-}
-
-.fa-twitter {
-  color: white;
-}
-
-.fa-google {
-  color: white;
-}
-
-.fa-linkedin {
-  color: white;
-}
-
-
-.fa-instagram {
-  color: white;
-}
-
-.fa-skype {
-  color: white;
-}
