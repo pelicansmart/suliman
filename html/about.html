@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>About</title>
+	<title>About Suliman-G</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 
+	<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
+	<!-- Bootsrap CDN Support -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </head>
-<body>
-		<header >
-		<nav class="navbar  navbar-expand-md navbar-light bg-light">
+<body id="body">
+	<header >
+		<nav class="navbar  navbar-expand-md navbar-light">
 			<div class="container-fluid">
 				<a class="navbar-brand" id="site-logo"href="#"><h1 id="navbar-logo">Suliman-G</h1></a>
 	  			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#site-navigation-collapse" aria-controls="site-navigation-collapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,13 +33,13 @@
 			  	<div class=" navbar-collapse collapse" id="site-navigation-collapse">
 				    <ul class="nav navbar-nav ml-auto">
 				      <li class="nav-item active ">
-				        <a class="nav-link " href="index.html">Home <span class="sr-only">(current)</span></a>
+				        <a class="nav-link " href="../index.html">Home <span class="sr-only">(current)</span></a>
 				      </li>
 				      <li class="nav-item">
-				        <a class="nav-link" href="html/about.html">About</a>
+				        <a class="nav-link" href="about.html">About</a>
 				      </li>
 				      <li class="nav-item">
-				        <a class="nav-link " href="html/contact.html">Contact</a>
+				        <a class="nav-link " href="contact.html">Contact</a>
 				      </li>
 				    </ul>
 			  	</div>
@@ -32,21 +47,6 @@
 		</nav>
 	</header>
 	<main>
-
-		<section id="introduction">
-
-			<div id="about-me">
-				<h1>About me
-				</h1>
-			</div>
-
-			<div id="profile-image-container" class="image-container">
-				<picture>
-					<source media="(min-width:771px)" srcset="../images/author-suliman-hero.png">
-					<source media="(min-width:480px)" srcset="../images/author-suliman-medium.png">
-					<img id="profile-image" class="image" src="../images/author-suliman-small.png" alt="proile image">
-				</picture>
-			</div>
 			<div id="profile-summary">
 				<p>I am a Software Engineer, recently (2019) graduated from Asia Pacific University, I am a Web, Mobile and Desktop developer with hands on experience on various frameworks and platforms. </p>
 				<p>I believe in the freedom of educational resources which makes me a part of the Open Source community, I am also a technology enthusiast which makes my career my hobby & passion. My edeavor is to improve my  self as programmer, writer, speaker, designer, and above all a better human.
@@ -58,14 +58,54 @@
 
 
 	</main>
-	<footer class="footer">
-		<div class="footer-left">
-			<p>Suliman Noor Mohammad &copy; 2019</p>
+	<footer class="page-footer">
+		<div class="container contact">
+			<div class="row">
+				<div class="col-sm-12 col-md-6 contact-left justify-content-center align-items-center">
+					<address>
+					    <h1 id="contact-left-heading">Get In Touch</h1>
+					    <p>kuala Lumpur, Malaysia</p>
+					    <p><abbr title="Phone">P:</abbr> <strong>(+971) 561134771</strong></p>
+					</address>
+
+					<address class="mb-2">
+					   	<strong>Suliman Noor Mohammad</strong><br>
+					    <a href="mailto:#">orzavon@gmail.com</a>
+					</address>
+				</div>
+				<div class="col-sm-12 col-md-6 contact-right justify-content-center align-self-center">
+					<div class="col-sm-12 col-md-12 mb-4 text-center">
+						<a href="#" class="btn primary-btn text-uppercase">Message Me</a>
+					</div>
+					<div class="col-sm-12 col-md-12 social-links text-center">
+						<a href="#" target="_blank" class="fa fa-twitter"></a>
+						<!-- <a href="#" target="_blank" class="fa fa-google"></a> -->
+						<a href="#" target="_blank" class="fa fa-linkedin"></a>
+						<a href="#" target="_blank" class="fa fa-instagram"></a>	
+						<a href="#" target="_blank" class="fa fa-skype"></a>
+					</div>
+				</div>
+			</div>
 		</div>
-		<div class="footer-right">
-			<a href="https://www.instagram.com/suliman.guzran" target="_blank"><i class="fa fa-instagram"></i></a>
-			<a href="https://my.linkedin.com/in/suliman-noor-mohammad-14448b138" target="_blank"><i class="fa fa-linkedin"></i></a>
-			<a href="https://github.com/pelicansmart" target="_blank"><i class="fa fa-github"></i></a>
+		<div class="container-fluid copyright-nav">
+			<div class="row">
+				<div class=" col-md-6 col-lg-6 text-center justify-content-center align-items-center text-center">
+						<ul class="nav bottom-nav">
+					      <li class="nav-item ">
+					        <a class="nav-link " href="index.html">Home</a>
+					      </li>
+					      <li class="nav-item">
+					        <a class="nav-link" href="html/about.html">About</a>
+					      </li>
+					      <li class="nav-item">
+					        <a class="nav-link " href="html/contact.html">Contact</a>
+					      </li>
+					    </ul>
+					</div>
+				<div class="col-md-6 col-lg-6 align-self-center align-items-center copyright text-center">
+				 	<p class="mb-0 float-right">Suliman Noor Mohammad <span class="copyright-year">2019</span></p>
+				</div>
+			</div>
 		</div>
 	</footer>
 </body>
