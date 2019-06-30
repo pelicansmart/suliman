@@ -428,5 +428,18 @@ background-image: radial-gradient(circle, #ffdf01, #ffde01, #ffdd01, #fedc01, #f
     font-size: 16px;
   }
 
+}
 
+
+
+
+
+/*-----------------------------------------------about page .css-------------------------------------------------------------*/
+
+#body .summary-area .summary-area-text-left, .summary-area-text-right{
+  background:#c25c47;
+}
+#body .summary-area  .summary-area-text-center{
+  text-align: justify;
+  text-decoration: none;
 }
