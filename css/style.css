@@ -81,6 +81,10 @@ background-image: radial-gradient(circle, #ffdf01, #ffde01, #ffdd01, #fedc01, #f
   cursor: pointer;
   position: relative;
 }
+
+#body .section-title{
+  margin-bottom: 2.0em;
+}
 #body .primary-btn:focus {
   outline: none;
 }
@@ -437,8 +441,21 @@ background-image: radial-gradient(circle, #ffdf01, #ffde01, #ffdd01, #fedc01, #f
 /*-----------------------------------------------about page .css-------------------------------------------------------------*/
 
 #body .summary-area .summary-area-text-left, .summary-area-text-right{
-  background:#c25c47;
+  background:#191919;
 }
+
+@media(max-width: 767px){
+  #body .summary-area .summary-text {
+    background: #191919;
+    color: #ffffff;
+  }
+}
+
+#body .interests-area  .card .card-image{
+  width:auto;
+  height:250px;
+}
+
 #body .summary-area  .summary-area-text-center{
   text-align: justify;
   text-decoration: none;
