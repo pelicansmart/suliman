@@ -460,3 +460,12 @@ background-image: radial-gradient(circle, #ffdf01, #ffde01, #ffdd01, #fedc01, #f
   text-align: justify;
   text-decoration: none;
 }
+
+.interests-cards .card{
+   margin-top: 3.75em;
+    border: 1px solid #FFCF00;
+    border-radius: .4em;
+}
+.interest-cards .card .card-title{
+  margin-top: 1em; 
+}
