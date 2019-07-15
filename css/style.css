@@ -466,6 +466,38 @@ background-image: radial-gradient(circle, #ffdf01, #ffde01, #ffdd01, #fedc01, #f
     border: 1px solid #FFCF00;
     border-radius: .4em;
 }
-.interest-cards .card .card-title{
+.interests-cards .card .card-title{
   margin-top: 1em; 
+}
+
+
+/*--------------------------------------------------Skills-area----------------------------*/
+
+.skills-area .skill-item {
+  margin-bottom: 1.2em;
+}
+
+.skills-area .progress-title{
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: .2em;
+    margin-left: .2em;
+}
+
+@media(max-width: 567px){
+    .skills-area .progress-title{
+      text-align: center;
+    }
+}
+
+.skills-area .progress{
+      height: 2em;
+      border-radius: 1em;
+      background: #191919;
+}
+
+.skills-area .progress .progress-bar{
+  background: #FFCF00;
+  border-radius: .9em;
 }
