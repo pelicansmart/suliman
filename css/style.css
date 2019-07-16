@@ -500,4 +500,21 @@ background-image: radial-gradient(circle, #ffdf01, #ffde01, #ffdd01, #fedc01, #f
 .skills-area .progress .progress-bar{
   background: #FFCF00;
   border-radius: .9em;
+  font-size: 1.22em;
+}
+
+
+/*-----------------------------------------------Temporaries------------------------------------*/
+.coming-soon {
+  position: fixed;
+  z-index: 100;
+  opacity: .5;
+  top: 30%;
+  left:35%;
+}
+
+.coming-soon img{
+  width: 400px;
+  height: 200px;
+  top: 50%;
 }
